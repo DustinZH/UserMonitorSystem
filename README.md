@@ -1,5 +1,7 @@
 # state decoder server
 This decoder server was created by Zhenghao Dong. The geolocation data is provided by Vistar Media.
+The key point to solve the puzzle is that how can we convert real-world problem to math problem.
+My idea is that how can we check the test point is in a complext polygon. That's what I need solve.
 I have designed three algorithm to parse the geolocation data(lontitude,latitude) to state name in USA.
 In this semester, I am studying nodejs+express. So I use them as the web server framework.
 
@@ -18,7 +20,7 @@ In this semester, I am studying nodejs+express. So I use them as the web server 
 - package.json
 - state-decoder-server.iml
 
-## Start conmand
+## Test conmand
 ```sh
 1. cd state-decoder-server
 2. node app.js &
@@ -42,6 +44,6 @@ First we define the cycle direction of polygon. Then, The definition of Count wi
 (2)Usecase: Compared with "Ray algorithm", the winding number not only can use in simple polygon, but aslo can use in the more complex polygon which has self-intersection. This alogorithm can detect on which layer the point is. 
 
 ### Area equality algorithm(geoDecodev3) Deprecated !!
-(1)Theory:test whether area of polygon equals sum of area of triangles,which are composed by test point with two neighbor border points.
+(1)Theory: test whether area of polygon equals sum of area of triangles,which are composed by test point with two neighbor border points.
 
 (2)Usecase: only can use in simple polygon without Concave shape or self-intersection point
